@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .container {
+    padding: 80px 120px;
+  }
+  footer {
+      padding: 0px 0px 0px 0px;
+      background-color: darkblue;
+      margin: 0px;
+    }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%;  
+     margin: auto; 
+   } 
+  .carousel-caption h3 {
+    color: lightblue;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: lightblue;
+    color:darkblue;
+  }
+  .bg-1 h3 {color: darkblue;}
+  .bg-1 p {font-style: italic;}
+  </style>
+</head>
+<body>
+  
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+
+  
+  
+
+ 
+
+<!-- Container (TOUR Section) -->
+<div class="bg-1">
+  <div class="container">
+    <h3 class="text-center">ADMIN PAGE</h3>
+    <p class="text-center">View doctor uploaded records .<br> and patient registerd records!</p>
+    <br><br><br><br>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <a href="{% url 'viewdrupdetails' %}"><img src="{% static 'hosapp/images/apr.jpg' %}"  height="600px" width="300"></a>
+          <p><strong></strong></p>
+          <p><strong>View Doctor Uploaded Details</strong></p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <a href="{% url 'viewptnupdetails' %}"><img src="{% static 'hosapp/images/adr.jpg' %}"  height="400" width="300"></a>
+          <p><strong></strong></p>
+          <p><strong>View Patient Registered Details</strong></p>
+         
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <a href="{% url 'entry' %}"><img src="{% static 'hosapp/images/entry3.jpg' %}"  height="400" width="300"></a>
+          <p><strong></strong></p>
+          <p> <strong>Log Out</strong></p>
+         
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<footer>
+  <p>
+    <a id="ftr" href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
+    <a id="ftr" href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
+    <a id="ftr" href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
+    <a id="ftr" href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
+  </p>
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+          <p>Patients Records <br>
+            Patients Appointments </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

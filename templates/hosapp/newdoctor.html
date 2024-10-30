@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+      <!-- <style>
+        dprop{
+            background-color: ;
+        }
+
+      </style> -->
+
+
+</head>
+
+    
+<body >
+   
+        
+         
+       
+    
+    <div style="display: flex;justify-content: center;">
+        <h2 style="text-decoration: underline; text-decoration-thickness: 1.6px;">Doctor Form</h2>
+    </div>
+    <div style="padding: 1.5% 15% 0 15%;">
+        <div class="dprop" >
+            <form action="" method="POST" id="contactForm" class="form" role="form" style=" 
+            justify-content: center;
+             background-color: #f2f2f2; align-items: center;border: 2px solid black;">
+             <div style="padding: 60px;">
+                {% csrf_token %}
+                {% if form.errors %}
+                <div class="alert alert-danger">{{form.errors}}</div>
+                {% endif %}
+                {% if msg %}
+                <div class="alert alert-success">{{msg}}</div>
+                {% endif %}
+                <div class="form-group">
+                    <label for="{{form.username.id_for_label}}">Username</label>
+                    {{form.username}}
+                </div>
+                <div class="form-group">
+                    <label for="{{form.first_name.id_for_label}}">Full Name</label>
+                    {{form.fullname}}
+                </div>
+                <div class="form-group">
+                    <label for="{{form.first_name.id_for_label}}">department</label>
+                    {{form.department}}
+                </div>
+                <div class="form-group">
+                    <label for="{{form.first_name.id_for_label}}">Mobile</label>
+                    {{form.mobile}}
+                </div>
+               
+                <div class="form-group">
+                    <label for="{{form.email.id_for_label}}">Email</label>
+                    {{form.email}}
+                </div>
+                <div class="form-group">
+                    <label for="{{form.password1.id_for_label}}">Password</label>
+                    {{form.password1}}
+                </div>
+                <div class="form-group">
+                    <label for="{{form.password2.id_for_label}}">Confirm Password</label>
+                    {{form.password2}}
+                </div>
+                
+              
+                
+                <button type="submit" class="btn btn-primary btn-lg" >submit</button>
+            </form>
+        </form>
+        </div>
+        
+    </div>
+    </div>
+</body>
+</html>
